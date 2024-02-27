@@ -578,6 +578,9 @@ header.down .menu{
 	margin-top: 1rem;
 	box-shadow: 5px 8px 14px -6px #000000  ;
   }
+  .image-card{
+	width: 50%;
+  }
 .image1{
 	width: 100%;
 	height: 100%;
@@ -637,6 +640,12 @@ header.down .menu{
  .link-desc{
     cursor: pointer;
 	margin-top: 2rem;
+ }
+ .link-desc a{
+	color:#039ba8;
+ }
+ .link-desc a:hover{
+	color: #003b5c;
  }
 .links-back{
 	list-style: none;
