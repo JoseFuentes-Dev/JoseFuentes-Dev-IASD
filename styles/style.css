@@ -188,7 +188,7 @@ header.down .menu{
     margin-top: 7rem;
 }
 /*responsive-stripes and contain*/
-@media(max-width: 1000px){
+@media(max-width: 1045px){
 	.right-stripe{
 		display: none;
 	}
@@ -669,7 +669,7 @@ align-items: center;
  .down-desc{
 	width: 600px;
 	margin-top: 2rem;
-	margin-left: 2rem;
+	
 	font-weight: 700;
 	font-size: 1.5em;
 	color: #003b5c;
@@ -688,4 +688,17 @@ align-items: center;
 .links-back{
 	list-style: none;
 	color: #ffffff;
+}
+/*Responsive container info*/
+@media(max-width: 700px){
+
+	.image-info img{
+		width: 500px;
+	  }
+	  .desc-info{	
+		width: 500px;
+	 }
+	 .down-desc{
+		width: 500px;
+	 }
 }
