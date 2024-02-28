@@ -702,3 +702,18 @@ align-items: center;
 		width: 500px;
 	 }
 }
+/*app mayordomia*/
+.download-app{
+	margin-top: 2rem;
+text-align: center;
+}
+.avalible-app{
+	margin-bottom: 1rem;
+	font-weight: 600;
+	font-size: 30px;
+	color:#003b5c;
+}
+.ico-avalible-app{
+	padding: .6rem;
+	width: 250px;
+}
