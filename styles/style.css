@@ -412,23 +412,23 @@ header.down .menu{
 
 /*cards-Section downloads*/
 .page-content {
-	display: grid;
-	grid-gap: 2rem;
+	display: flex;
+	gap: 2rem;
 	padding: 2rem;
 	max-width: 1024px;
-	margin: 0 auto;
+	flex-wrap: wrap;
+    
 
   }
-  @media (min-width: 600px) {
+  @media (max-width: 800px) {
 	.page-content {
-	  grid-template-columns: repeat(2, 1fr);
+
+flex-direction: column;
+justify-content: center;
+align-items: center;
 	}
   }
-  @media (min-width: 800px) {
-	.page-content {
-	  grid-template-columns: repeat(4, 1fr);
-	}
-  }
+
   
 
   .card {
@@ -443,9 +443,10 @@ header.down .menu{
 	cursor: pointer;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
   }
-  @media (min-width: 600px) {
+  @media (min-width: 650px) {
 	.card {
-	  height: 320px;
+	  height: 350px;
+	  width: 400px;
 	}
   }
   .card:before {
@@ -619,7 +620,7 @@ header.down .menu{
 	background-color: #c0e2e5;
   }
   /*responsive-stripes and contain*/
-@media(max-width: 500px){
+@media(max-width: 600px){
 	
 	.card1{
 		flex-direction: column;
@@ -668,6 +669,7 @@ header.down .menu{
  .down-desc{
 	width: 600px;
 	margin-top: 2rem;
+	margin-left: 2rem;
 	font-weight: 700;
 	font-size: 1.5em;
 	color: #003b5c;
