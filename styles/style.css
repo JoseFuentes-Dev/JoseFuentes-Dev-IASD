@@ -173,6 +173,7 @@ header.down .menu{
     background-color: #003b5c;
     background-image: linear-gradient(90deg, #003b5c 0%, #007681 100%);
     height: 10rem;
+	width: 100%;
 	
     
     
@@ -193,9 +194,7 @@ header.down .menu{
 	.right-stripe{
 		display: none;
 	}
-	.inside-stripe{
-		width: 100%;
-	}
+
 	.containall{
 		width: 100%;
 	}
