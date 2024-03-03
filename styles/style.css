@@ -667,16 +667,29 @@ align-items: center;
 	align-items: center;
 	margin-top: 2rem;
 	gap: 10px;
+	width: 100%;
+	padding: 3rem;
 	
   }
-  .image-info img{
-	width: 600px;
-  }
+
  .desc-info{	
-	width: 600px;
+	width: 100%;
+	
  }
- .down-desc{
+
+ .image-info img{
 	width: 600px;
+	height: 500px;
+  }
+  .image-info{
+	text-align: center;
+	width: 100%;
+  }
+  .downloads{
+	width: 100%;
+  }
+ .down-desc{
+	width: 100%;
 	margin-top: 2rem;
 	
 	font-weight: 700;
@@ -699,17 +712,11 @@ align-items: center;
 	color: #ffffff;
 }
 /*Responsive container info*/
-@media(max-width: 700px){
-
+@media(max-width: 690px){
 	.image-info img{
-		width: 500px;
-	  }
-	  .desc-info{	
-		width: 500px;
-	 }
-	 .down-desc{
 		width: 100%;
-	 }
+		height: 300px;
+	  }
 }
 /*app mayordomia*/
 .download-app{
