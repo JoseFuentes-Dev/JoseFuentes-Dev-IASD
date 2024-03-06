@@ -740,3 +740,61 @@ text-align: center;
 	padding: .6rem;
 	width: 250px;
 }
+
+
+
+
+
+
+.wrap{position: relative; width: 100%; height: 100%; overflow: hidden;
+}
+
+.container{position: relative; margin: 0 auto; overflow: hidden}
+/*header*/
+/* .header .nav_tab{overflow: hidden; text-align: center;  border-bottom: 1px solid #000}
+.header .nav_tab li{width: 25%; height: 100%; float: left}
+.header .nav_tab li a{display: block; width: 100%; padding: 20px 0}
+.header .nav_tab li a:hover{background: #333; color: #fff} */
+/*container*/
+.container .tab-navigation{position: fixed; left: .8%; top: 55%; margin-top: -110px; z-index: 100}
+
+.tab-navigation li{background: #333; margin-bottom: 10px; cursor: pointer;}
+.tab-navigation li a{display: block; color: #fff; padding: 5px 12px; margin-left: 15px; width: 100%;}
+.tab-navigation li.active, 
+.tab-navigation li:hover {background: #666}
+.tab-content .sec{overflow: hidden;position: relative}
+.tab-content .sec01{background-color: #b284ed}
+.tab-content .sec02{background-color: #cf77c3}
+.tab-content .sec03{background-color: #b0de66}
+.tab-content .sec04{background-color: #f1df60}
+
+.tab01:hover,.tab02:hover,.tab03:hover,.tab04:hover{
+	transition: all 1s ease;
+    width: 170px;
+	height: auto;
+}
+
+.tab01{
+	width: 25px;
+	height: 25px;
+	overflow: hidden;	
+}
+
+.tab02{
+	width: 25px;
+	height: 25px;
+	overflow: hidden;
+	
+	
+}
+
+.tab03{
+	width: 25px;
+	height: 25px;
+	overflow: hidden;
+}
+.tab04{
+	width: 25px;
+	height: 25px;
+	overflow: hidden;
+}

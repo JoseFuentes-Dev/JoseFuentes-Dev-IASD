@@ -63,3 +63,72 @@ window.addEventListener("scroll",function(){
   header.classList.toggle("down",window.scrollY>0);
 });
 
+
+
+
+
+//priueba
+function scrollTo(pos) {
+	$('html, body').stop().animate({scrollTop: pos}, 500);
+  }
+  
+  function activeClass(target, className) {
+	  target.addClass(className).siblings().removeClass(className);
+  }
+  
+  function resizeHeight() {
+	const _sectionHeight = $(window).height();
+	 $(".tab-content .sec").height(_sectionHeight);
+  }
+  
+  function getOffsets() {
+	const _offsets = [];
+	$(".tab-content .sec").each(function (i) {
+	  _offsets[i] = $(this).offset().top;
+	});
+	return _offsets;
+  }
+  
+  
+  $(function() {
+	const tabButtons = $(".tab-navigation li");
+	let offsets = [];
+	
+	$(window).load(function () {
+	  resizeHeight();
+	  offsets = getOffsets();
+	});
+	
+	$(window).resize(function(){
+	  resizeHeight();
+	  offsets = getOffsets();
+	})
+  
+	//click (tab-navgigation-button)
+	tabButtons.click(function (event) {
+	  event.preventDefault();
+  
+	  const index = $(this).index();
+	  const pos = index > 0 ? offsets[index] : 0;
+	  scrollTo(pos);
+	});
+	
+  $(window).scroll(function () {
+	const pos = $(this).scrollTop();
+	let targetClass;
+	let activeTarget;
+  
+	 for (let i = 0; i < offsets.length; i++) {
+		if (pos <= offsets[0]) {
+		  targetClass = ".tab01";
+		  break;
+		} else if (pos > offsets[i - 1] && pos <= offsets[i]) {
+		  targetClass = ".tab0" + (i+1);
+		} else if (pos >= offsets[offsets.length]) {
+		  targetClass = ".tab05";
+		}
+	  }
+	  activeTarget = $(targetClass);
+	  activeClass(activeTarget, "active");
+	});
+  });
