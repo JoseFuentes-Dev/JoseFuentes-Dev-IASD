@@ -22,8 +22,14 @@ min-height: 100vh;
 .containall{
 	width: 90%;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	
 
 }
+
 :before,:after{
 	box-sizing: border-box;
 }
@@ -998,11 +1004,12 @@ text-align: center;
 
   /* FOOTER */
 .footer {
+	
 	width: 100%;
 	background: #003b5c;
 	display: block;
-	position: absolute;
-	bottom: 0;
+	
+	
  }
  .img-footer{
 	width: 13rem;
