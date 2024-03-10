@@ -15,8 +15,7 @@
 body{
 display: flex;
 
-min-width: 100vw;
-min-height: 100vh;
+
 
 }
 .containall{
@@ -454,8 +453,8 @@ align-items: center;
 	display: flex;
 	align-items: flex-end;
 	overflow: hidden;
-	height: 350px;
-	width: 400px;
+	height: 25rem;
+	width: 25rem;
 	text-align: center;
 	color: whitesmoke;
 	background-color: whitesmoke;
@@ -590,7 +589,6 @@ align-items: center;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	cursor:default;
 	
   }
   .card1{
