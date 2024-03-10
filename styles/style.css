@@ -461,6 +461,7 @@ align-items: center;
 	cursor: pointer;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
   }
+  
  
   
   .card:before {
@@ -580,7 +581,24 @@ align-items: center;
 	  transition-duration: 0s;
 	}
   }
+  @media (max-width: 640px) {
+	.card {
+		height: 16rem;
+		width: 16rem;
 
+	}
+	.title {
+		font-size: 1rem;
+		
+		
+	  }
+	  .copy {
+	
+		font-size: .8rem;
+		
+	  }
+
+}
 
   /*cards-Section info*/
   .container-cards{
