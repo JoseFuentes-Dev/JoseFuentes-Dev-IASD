@@ -68,78 +68,94 @@ window.addEventListener("scroll",function(){
 
 
 //priueba
-function Tabs(options){
-	
-	var tabs = document.querySelector(options.el);
-	var initCalled = false;
-	var tabNavigation = tabs.querySelector(".c-tabs-nav");
-	var tabNavigationLinks = tabs.querySelectorAll(".c-tabs-nav__link");
-	var tabContentContainers = tabs.querySelectorAll(".c-tab");
 
-	var marker = options.marker ? createNavMarker() : false;
+// home
 
-	var activeIndex = 0;
+const slides = document.querySelector(".slider").children;
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const indicator = document.querySelector(".indicator");
+let index = 0;
 
-  function init(){
-		if (!initCalled){
-			initCalled = true;
-
-			for (var i = 0; i < tabNavigationLinks.length; i++){
-    			var link = tabNavigationLinks[i];
-    			clickHandlerSetup(link, i)
-    		}
-
-    		if (marker){
-    			setMarker(tabNavigationLinks[activeIndex]);
-    		}
-		}
-	}
-
-	function clickHandlerSetup(link, index){
-    	link.addEventListener("click", function(e){
-    		e.preventDefault();
-    		goToTab(index);
-    	})
-    }
-
-    function goToTab(index){
-    	if (index >= 0 && index != activeIndex && index <= tabNavigationLinks.length){
-    		tabNavigationLinks[activeIndex].classList.remove('is-active');
-    		tabNavigationLinks[index].classList.add('is-active');
-    		
-    		tabContentContainers[activeIndex].classList.remove('is-active');
-    		tabContentContainers[index].classList.add('is-active');
-
-    		if (marker){
-    			setMarker(tabNavigationLinks[index]);
-    		}
-
-    		activeIndex = index;
-    	}
-    }
-
-    function createNavMarker(){
-    	var marker = document.createElement("div");
-    	marker.classList.add("c-tab-nav-marker");
-    	tabNavigation.appendChild(marker);
-    	return marker;
-    }
-
-    function setMarker(element){
-        marker.style.left = element.offsetLeft +"px";
-        marker.style.width = element.offsetWidth + "px";
-    }
-
-    return {
-    	init: init,
-    	goToTab: goToTab
-    }
-}
-
-
-var m = new Tabs({
-	el: "#tabs",
-	marker: true
+prev.addEventListener("click", function () {
+  prevSlide();
+  updateCircleIndicator();
+  resetTimer();
 });
 
-m.init();
+next.addEventListener("click", function () {
+  nextSlide();
+  updateCircleIndicator();
+  resetTimer();
+});
+
+// create circle indicators
+function circleIndicator() {
+  for (let i = 0; i < slides.length; i++) {
+    const div = document.createElement("div");
+    div.innerHTML = i + 1;
+    div.setAttribute("onclick", "indicateSlide(this)");
+    div.id = i;
+    if (i == 0) {
+      div.className = "active";
+    }
+    indicator.appendChild(div);
+  }
+}
+circleIndicator();
+
+function indicateSlide(element) {
+  index = element.id;
+  changeSlide();
+  updateCircleIndicator();
+  resetTimer();
+}
+
+function updateCircleIndicator() {
+  for (let i = 0; i < indicator.children.length; i++) {
+    indicator.children[i].classList.remove("active");
+  }
+  indicator.children[index].classList.add("active");
+}
+
+function prevSlide() {
+  if (index == 0) {
+    index = slides.length - 1;
+  } else {
+    index--;
+  }
+  changeSlide();
+}
+
+function nextSlide() {
+  if (index == slides.length - 1) {
+    index = 0;
+  } else {
+    index++;
+  }
+  changeSlide();
+}
+
+function changeSlide() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  slides[index].classList.add("active");
+}
+
+function resetTimer() {
+  // when click to indicator or controls button
+  // stop timer
+  clearInterval(timer);
+  // then started again timer
+  timer = setInterval(autoPlay, 4000);
+}
+
+function autoPlay() {
+  nextSlide();
+  updateCircleIndicator();
+}
+
+let timer = setInterval(autoPlay, 4000);
+
