@@ -1335,22 +1335,52 @@ text-align: center;
 /*prueba */
 .carousel-wrap {
 	margin: 90px auto;
-	padding: 0 5%;
-	width: 100%;
+	padding: 0 3rem;
+	max-width: 1030px;
 	position: relative;
 
   }
+  
+  /* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+	.carousel-wrap {
+		max-width: 1060px;
+	}
+}
+@media screen and (min-width: 1300px) {
+	.carousel-wrap {
+		max-width: 1500px;
+	}
+}
+/* for mobile screen view */
+@media screen and (max-width: 660px) {
+	.carousel-wrap {
+		max-width: 580px;
+	}
+}
+@media screen and (max-width: 499px) {
+	.item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+
+}
+
   
   /* fix blank or flashing items on carousel */
   .owl-carousel .item {
 	position: relative;
 	z-index: 100; 
 	-webkit-backface-visibility: hidden; 
+
 	
   }
   .owl-carousel .item a img{
 	
-	width: 250px;
+	width: 220px;
 	height: 200px;
   }
   /* end fix */
