@@ -1247,7 +1247,21 @@ text-align: center;
 	color: #fff;
 	font-size: 15px;
 	letter-spacing: 0.5px;	
+	
  }
+ .footer-ul-info {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	list-style: none;
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 0.5px;	
+	
+ }
+ 
+ 
 
  .footer-ul a {
 	text-decoration: none;
@@ -1267,6 +1281,7 @@ text-align: center;
 
 .footer-ul li i {
 	margin-right: 20px;
+	
 }
 
 .social-media {
@@ -1317,4 +1332,6 @@ text-align: center;
 	}
 }
 
-/* you can toggle the media screen view accordingly by changing the (max-width: px) to your convenience */
+/*prueba */
+
+

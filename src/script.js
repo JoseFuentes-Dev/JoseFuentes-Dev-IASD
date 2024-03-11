@@ -66,9 +66,6 @@ window.addEventListener("scroll",function(){
 
 
 
-
-//priueba
-
 // home
 
 const slides = document.querySelector(".slider").children;
@@ -149,7 +146,7 @@ function resetTimer() {
   // stop timer
   clearInterval(timer);
   // then started again timer
-  timer = setInterval(autoPlay, 4000);
+  timer = setInterval(autoPlay, 8000);
 }
 
 function autoPlay() {
@@ -157,5 +154,5 @@ function autoPlay() {
   updateCircleIndicator();
 }
 
-let timer = setInterval(autoPlay, 4000);
+let timer = setInterval(autoPlay, 8000);
 
