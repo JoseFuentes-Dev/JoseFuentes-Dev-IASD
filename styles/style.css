@@ -441,11 +441,11 @@ header.down .menu{
 		position: fixed;
 		width: 320px;
 		background-color:#ffffff;
-		left:0;
+		right:0;
 		top:0;
 		height: 100%;
 		overflow: hidden;
-		transform: translate(-100%);
+		transform: translate(100%);
 		transition: all 0.4s ease;
 		z-index: 1099;
 		margin-top: 0;
