@@ -1256,9 +1256,12 @@ text-align: center;
 	gap: 20px;
 	list-style: none;
 	color: #fff;
-	font-size: 14px;
+	font-size: 13px;
 	letter-spacing: 0.5px;	
 	
+ }
+ .footer-ul-info li i{
+	margin-right: .7rem;
  }
  
  
@@ -1332,7 +1335,7 @@ text-align: center;
 	}
 }
 
-/*prueba */
+/*carrousell inicio */
 .carousel-wrap {
 	margin: 90px auto;
 	padding: 0 3rem;
