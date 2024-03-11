@@ -1336,8 +1336,9 @@ text-align: center;
 .carousel-wrap {
 	margin: 90px auto;
 	padding: 0 5%;
-	width: 80%;
+	width: 100%;
 	position: relative;
+
   }
   
   /* fix blank or flashing items on carousel */
@@ -1345,9 +1346,10 @@ text-align: center;
 	position: relative;
 	z-index: 100; 
 	-webkit-backface-visibility: hidden; 
+	
   }
   .owl-carousel .item a img{
-	padding-left: 20px;
+	padding-left: 25px;
 	width: 250px;
 	height: 200px;
   }
